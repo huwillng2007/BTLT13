@@ -1,0 +1,18 @@
+/* CSS bổ sung cho phần Tailwind chưa hỗ trợ sẵn */
+
+html { scroll-behavior: smooth; }
+/* Chừa chỗ cho header dính khi nhảy tới anchor */
+section[id], aside[id] { scroll-margin-top: 5.5rem; }
+
+/* Animation tuỳ biến: hero trượt nhẹ lên khi tải trang */
+@keyframes hero-in {
+  from { opacity: 0; transform: translateY(16px); }
+  to   { opacity: 1; transform: translateY(0); }
+}
+.hero-in { animation: hero-in 0.7s ease-out both; }
+
+/* Tôn trọng người dùng tắt hiệu ứng chuyển động */
+@media (prefers-reduced-motion: reduce) {
+  html { scroll-behavior: auto; }
+  .hero-in { animation: none; }
+}

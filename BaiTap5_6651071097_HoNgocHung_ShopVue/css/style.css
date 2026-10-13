@@ -1,0 +1,12 @@
+/* Ẩn template Vue chưa biên dịch để tránh nhấp nháy {{ }} khi tải trang */
+[v-cloak] { display: none; }
+
+html { scroll-behavior: smooth; }
+section[id], aside[id] { scroll-margin-top: 5rem; }
+
+/* Banner khuyến mãi dùng gradient xanh - tím */
+.promo { background: linear-gradient(90deg, #2563eb, #7c3aed); }
+
+@media (prefers-reduced-motion: reduce) {
+  html { scroll-behavior: auto; }
+}
